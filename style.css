@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  align-items: center;
+}
+#alarmBox {
+  height: 600px;
+  width: 400px;
+  background-color: gainsboro;
+  border: 2px solid silver;
+  border-radius: 20px;
+}
+
+.activeClock {
+  /* display: flex; */
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  filter: drop-shadow(4px 1px 1px rgb(81, 81, 81));
+}
+.ampm {
+  color: rgb(0, 253, 0);
+}
+
+/* design start of edit alarm box */
+.alarmEditBox {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.alarmEditBox input {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border-color: beige;
+  font-size: 1.5rem;
+  padding-left: 15px;
+}
+.setAlarm {
+  background-color: rgb(137, 132, 133);
+  border-radius: 10px;
+  width: 100px;
+  font-size: larger;
+}
+/* record of set alarm list start here */
+.recordOfAlarm {
+  width: 100%;
+  height: 70%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.setTime {
+  border: 1px solid black;
+  height: 30px;
+  width: 220px;
+  padding: 5px 10px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.deleteBtn {
+  margin-top: 50px;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  /* padding:20px; */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm clock</title>
+  </head>
+  <body>
+    <section id="alarmBox">
+      <!-- here running clock is places -->
+      <main class="activeClock">
+        01:02:00
+        <span class="ampm"> PM</span>
+      </main>
+      <!-- alarm set position -->
+      <div class="alarmEditBox">
+        <input type="time" />
+        <!-- alarm set button -->
+        <button class="setAlarm">Set Alarm</button>
+      </div>
+
+      <!-- reminder of alarm which is already set -->
+      <div class="recordOfAlarm">
+        <div class="setTime">02:04:00 <span class="ampm">PM</span></div>
+        <button class="deleteBtn">Delete</button>
+      </div>
+    </section>
+  </body>
+</html>
