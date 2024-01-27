@@ -1,3 +1,4 @@
+//all selection of id is here which is globally use.
 let time = document.querySelector("#time");
 let dateInput = document.querySelector("#alarmDate");
 let timeInput = document.querySelector("#alarmTime");
@@ -27,11 +28,19 @@ function timeChangeFunction() {
 //this function will help to set alarm
 function alarmSetFunction() {
   let now = new Date();
+  // The "T" separator conforms to the ISO 8601 standard for representing combined date and time values.
   let selectedDate = new Date(dateInput.value + "T" + timeInput.value);
+
+  // Check if both inputs have values
+  if (!dateInput.value || !timeInput.value) {  
+    alert("Please select both date and time for the alarm.");
+    return;  
+    // Exit the function if inputs are empty
+  }
 
   //now set condition for selectDate in respect of date.
   if (selectedDate <= now) {
-    alert(`Please select a future date and time.`);
+    alerts
     //to reload page again
     window.location.reload();
     return;
@@ -42,12 +51,13 @@ if (alarmTimesArray.includes(selectedDate.toString())) {
     return;
 }
 
+
 if (count < maxValue) {
     let timeUntilAlarm = selectedDate - now;
     let alarmDiv = document.createElement("element");
     alarmDiv.classList.add("alarm");
     alarmDiv.innerHTML = `
-    <span>
+    <span style="font-size:1.2rem;font-family:Franklin Gothic Medium">
     ${selectedDate.toLocaleString()}
     </span>
     <button class="delete-alarm" style="border-radius:10px;background-color:red;color:white;font-size:1rem">Delete</button>
@@ -78,7 +88,7 @@ if (count < maxValue) {
     count++;
     alarmTimesArray.push(selectedDate.toString());
 } else {
-    alert("you can only set a maximum of 3 alarms.");
+    alert("you can only set a maximum of 5 alarms.");
     
 }
 }
