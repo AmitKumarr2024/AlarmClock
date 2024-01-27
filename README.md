@@ -17,4 +17,6 @@ User can use this clock to understand the alarm clock working.Because all the fu
 ## Author
 Amit kumar
 
-[AlarmClock page](https://amitkumarr2024.github.io/AlarmClock/)
+
+## Project is Live link
+[AlarmClock is live](https://amitkumarr2024.github.io/AlarmClock/)
