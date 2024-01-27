@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Alarm clock</title>
-  </head>
-  <body>
-    <section id="alarmBox">
-      <!-- here running clock is places -->
-      <main class="activeClock">
-        <p class="hours">00</p>
-        <p class="minutes">00</p>
-        <p class="seconds">00</p>
-        <p class="ampm">AM/PM</p>
-        <span class="ampm"> PM</span>
-      </main>
-      <!-- alarm set position -->
-      <div class="alarmEditBox">
-        <input type="time" />
-        <!-- alarm set button -->
-        <button class="setAlarm">Set Alarm</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Alarm Clock</title>
+</head>
+<body>
+  <div class="clock">
+    <h1>AlarmClock</h1>
+    <div id="time" class="time">
+      00:00:00
+    </div>
+    <div class="input-row">
+      <div class="input-field">
+        <label for="alarDate">
+          Select Date:
+        </label>
+        <input type="date" class="alarm-input" id="alarmDate" min="">
       </div>
-
-      <!-- reminder of alarm which is already set -->
-      <div class="recordOfAlarm">
-        <div class="setTime">02:04:00 <span class="ampm">PM</span></div>
-        <button class="deleteBtn">Delete</button>
+      <div class="input-field">
+        <label for="alarTime">
+          Select Time:
+        </label>
+        <input type="time" class="alarm-input" id="alarmTime">
+        <button id="setAlarm">
+          Set Alarm
+        </button>
       </div>
-    </section>
+      <div class="alarms" id="alarms">
 
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

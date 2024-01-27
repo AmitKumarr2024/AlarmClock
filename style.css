@@ -1,79 +1,105 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-shadow: none;
+  font-family: monospace, sans-serif;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.clock {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 15px 16px 100px rgb(71, 70, 70);
+  padding: 20px;
+  width: 350px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: rgb(153, 0, 255);
+}
+h3 {
+  font-size: 1rem;
+  color: #333333;
+}
+.time {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+}
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   align-items: center;
 }
-#alarmBox {
-  height: 600px;
-  width: 400px;
-  background-color: gainsboro;
-  border: 2px solid silver;
-  border-radius: 20px;
-}
-
-.activeClock {
-  /* display: flex; */
-  margin-top: 40px;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-
-  filter: drop-shadow(4px 1px 1px rgb(81, 81, 81));
-}
-.ampm {
-  color: rgb(0, 253, 0);
-}
-
-/* design start of edit alarm box */
-.alarmEditBox {
+.input-field {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-
-.alarmEditBox input {
-  height: 30px;
-  width: 200px;
-  border-radius: 10px;
-  border-color: beige;
-  font-size: 1.5rem;
-  padding-left: 15px;
-}
-.setAlarm {
-  background-color: rgb(137, 132, 133);
-  border-radius: 10px;
-  width: 100px;
-  font-size: larger;
-}
-/* record of set alarm list start here */
-.recordOfAlarm {
+input[type="date"],
+input[type="time"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   width: 100%;
-  height: 70%;
-  /* background-color: red; */
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  max-width: 300px;
 }
 
-.setTime {
-  border: 1px solid black;
-  height: 30px;
-  width: 220px;
-  padding: 5px 10px;
-  margin-top: 50px;
-  font-size: 1.5rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
-.deleteBtn {
-  margin-top: 50px;
-  width: 90px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  /* padding:20px; */
+
+#setAlarm,
+#updateTime {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#setAlarm:hover,
+#updateTime:hover {
+  background-color: #0056b3;
+}
+
+.alarms{
+    margin-top: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.alarm{
+  width: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
