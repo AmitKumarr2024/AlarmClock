@@ -4,7 +4,7 @@ let timeInput = document.querySelector("#alarmTime");
 let btn = document.querySelector("#setAlarm");
 let contain = document.querySelector("#alarms");
 let interval;
-let maxValue = 3;
+let maxValue = 5;
 let count = 0;
 let alarmTimesArray = [];
 
