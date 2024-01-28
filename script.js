@@ -45,7 +45,8 @@ function alarmSetFunction() {
 
   //now set condition for selectDate in respect of date.
   if (selectedDate <= now) {
-    alerts
+    alert(`Invalid time. Please select 
+    a future date and time.`)
     //to reload page again
     window.location.reload();
     return;
