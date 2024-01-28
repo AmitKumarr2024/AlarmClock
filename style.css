@@ -1,33 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: monospace, sans-serif;
-  /* display: flex; */
-  /* justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-   */
-   min-height: 100vh;
-   margin: 0;
-  }
-  
-  .clock {
-    position: relative;
-    top: 60px;
-    left: 40%;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+.clock {
+  /* position: relative;
+  top: 60px;
+  left: 40%; */
   text-align: center;
-  background:linear-gradient(45deg, rgb(208, 241, 124),rgb(211, 138, 79)) ;
+  background: linear-gradient(45deg, rgb(208, 241, 124), rgb(211, 138, 79));
   border-radius: 10px;
   box-shadow: 15px 16px 100px rgb(131, 155, 47);
   padding: 20px;
   width: 400px;
-  
 }
-
-
 
 .time {
   font-size: 3rem;
   margin: 20px 0;
   color: #002aff;
-  filter: drop-shadow( 2px -4px 1px #ff0202);
+  filter: drop-shadow(2px -4px 1px #ff0202);
   font-weight: 700;
 }
 .input-row {
@@ -52,7 +54,7 @@ input[type="time"] {
   max-width: 300px;
 }
 
-label{
+label {
   border: 1px solid white;
   border-bottom-width: 0;
   border-left-width: 0;
@@ -60,7 +62,6 @@ label{
   color: white;
   background-color: rebeccapurple;
   border-radius: 45px;
-  
 }
 /* .button-row {
   display: flex;
@@ -85,31 +86,31 @@ label{
   background-color: #0056b3;
 }
 
-.alarms{
-    margin-top: 20px;
-    text-align: left;
-    color: #333;
+.alarms {
+  margin-top: 20px;
+  text-align: left;
+  color: #333;
 }
 
-.alarm{
+.alarm {
   width: 350px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    padding: 20px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
-    font-size: 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  font-size: 14px;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
