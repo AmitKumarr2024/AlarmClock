@@ -9,12 +9,17 @@ let maxValue = 5;
 let count = 0;
 let alarmTimesArray = [];
 
+
+// this function is for active clock function
 function timeChangeFunction() {
   let current = new Date();
   let hours = current.getHours();
+  // for minutes and seconds padStart will specified length so minute will not come in single digit.
   let minutes = String(current.getMinutes()).padStart(2, "0");
   let Seconds = String(current.getSeconds()).padStart(2, "0");
   let period = "AM";
+
+  // in this condition will set only 12 hours time not like 24 hours time.
   if (hours >= 12) {
     period = "PM";
     if (hours > 12) {
@@ -51,9 +56,10 @@ if (alarmTimesArray.includes(selectedDate.toString())) {
     return;
 }
 
-
+// this area is for setAlarm with accurate time and delete button.
 if (count < maxValue) {
     let timeUntilAlarm = selectedDate - now;
+    // here it is created javascript element with javascript
     let alarmDiv = document.createElement("element");
     alarmDiv.classList.add("alarm");
     alarmDiv.innerHTML = `
@@ -74,6 +80,7 @@ if (count < maxValue) {
             alarmTimesArray.splice(idx, 1);
         }
     });
+    // after set alarm time meet then it will delete after alarm clock delete.
     interval = setTimeout(() => {
         alert("Time to Wake up!");
         alarmDiv.remove();
@@ -93,9 +100,11 @@ if (count < maxValue) {
 }
 }
 
+// this function is only for delete button
 function showAlarmFunction() {
   let alarms = contain.querySelectorAll(".alarm")
   alarms.forEach((alarm) => {
+
     let deleteButton = alarm.querySelector(".delete-alarm");
     deleteButton.addEventListener("click", () => {
       alarmDiv.remove();
@@ -113,5 +122,7 @@ function showAlarmFunction() {
 //call all the function(
 showAlarmFunction();
 setInterval(timeChangeFunction, 1000);
+// this only start after set alarm btn
 btn.addEventListener("click",alarmSetFunction);
+//calling active clock to running non stop
 timeChangeFunction();
